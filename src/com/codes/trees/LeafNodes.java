@@ -1,6 +1,6 @@
 package com.codes.trees;
 
-public class leafNodes {
+public class LeafNodes {
     Node root;
 
     void leaf(Node node){
@@ -16,7 +16,7 @@ public class leafNodes {
     }
     public static void main(String[] args)
     {
-        leafNodes tree = new leafNodes();
+        LeafNodes tree = new LeafNodes();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);

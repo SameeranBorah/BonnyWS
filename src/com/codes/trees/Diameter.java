@@ -1,8 +1,8 @@
 package com.codes.trees;
 
-public class diameter extends depth {
+public class Diameter extends Depth {
     Node root;
-    diameter(){
+    Diameter(){
         root=null;
     }
     int diameterr(Node node){
@@ -32,7 +32,7 @@ public class diameter extends depth {
     }*/
     public static void main(String[] args)
     {
-        diameter tree = new diameter();
+        Diameter tree = new Diameter();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
@@ -40,7 +40,7 @@ public class diameter extends depth {
         tree.root.left.right = new Node(5);
 
 
-        System.out.println("\ndiameter of binary tree is " +tree.diameterr(tree.root));
+        System.out.println("\nDiameter of binary tree is " +tree.diameterr(tree.root));
 
 
     }
