@@ -32,7 +32,7 @@ public class assign21
 
         System.out.print("Enter the number of records n: ");
         n = in.nextInt();
-        System.out.println("Total number of possible clustering arrangements is " + bellNumber(n));
+        System.out.println("Total number of possible clustering arrangements is :" + bellNumber(n));
 
         int i;
         for (i = 0; i < n; ++i) {
@@ -85,8 +85,6 @@ public class assign21
             int max = s[i];
             for (i = i - 1; i >= 0; --i)
                 m[i] = max;
-
-
             return 1;
         }
 
