@@ -31,9 +31,10 @@ public class assign22 {
 
 
         xyz = inputFile.next();
+        count=((xyz.length()/4)+1);
         array=xyz.split(",");
 
-        count=(xyz.length()/4);
+
 
         //split the fractions[] into two arrays: numerator and denominator
         for(int i = 0; i < count; i++){
@@ -54,20 +55,27 @@ public class assign22 {
         int den;
 
 
-        for(int i = 0; i < count; i++){
+        for(int i = 0; i < count; i++) {
             den = denominator[i];
             num = numerator[i];
             int smaller = num < den ? num : den;
-            int HCF = -1;
+            int HCF = 1;
             for (int j = smaller; j > 0; --j) {
-                if (num%j==0&&den%j==0) {
+                if (num % j == 0 && den % j == 0) {
                     HCF = j;
-                    numerator[i]=(num/HCF);
-                    denominator[i]=(den/HCF);
-                    break;
+
                 }
+                num = num / HCF;
+                den = den / HCF;
+                numerator[i] = num;
+                denominator[i] = den;
+                break;
             }
 
+        }
+        for(int i = 0; i < count; i++){
+            den = denominator[i];
+            num = numerator[i];
 
             for(int a = 0; a < count; a++){
                 if (!counted[a]) {
