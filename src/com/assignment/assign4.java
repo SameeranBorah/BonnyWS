@@ -117,6 +117,28 @@ class BinaryTree
             System.out.print(temp.data + " ");
         }
     }
+
+
+    public void iterativelevelOrderTraversal(Node root) {
+        Queue<Node> queue = new ArrayDeque<>();
+        if (root != null) {
+            queue.add(root);
+            while (!queue.isEmpty()) {
+                root = queue.remove();
+                Node lc = root.left;
+                Node rc = root.right;
+                if (lc != null) {
+                    queue.add(lc);
+                }
+                if (rc != null) {
+                    queue.add(rc);
+                }
+                System.out.print(root.data + " ");
+            }
+        }
+    }
+
+
     public static void main(String args[])
     {
         BinaryTree tree = new BinaryTree();
@@ -132,5 +154,7 @@ class BinaryTree
         tree.printPreorder(mynode);
         System.out.println("\nPostorder traversal of the constructed tree is ");
         tree.printPostorder(mynode);
+        System.out.println("\nLevel order traversal of the constructed tree is ");
+        tree.iterativelevelOrderTraversal(mynode);
     }
 }
